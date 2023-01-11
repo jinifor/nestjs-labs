@@ -3,12 +3,13 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersController } from './users/users.controller';
 import { UsersModule } from './users/users.module';
+import { ManagersModule } from './managers/managers.module';
 
 /**
  * 애플리케이션의 루트 모듈 : The root module of the application.
  */
 @Module({
-  imports: [UsersModule],
+  imports: [UsersModule, ManagersModule],
   controllers: [AppController, UsersController],
   providers: [AppService],
 })
